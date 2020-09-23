@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0788D12506E9EF00F6C23A /* gameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0788D02506E9EF00F6C23A /* gameBrain.swift */; };
+		0E8FF7B3250B3B10007489F9 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */; };
 		0E95369D2503378700FF9007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95369C2503378700FF9007 /* AppDelegate.swift */; };
 		0E95369F2503378700FF9007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95369E2503378700FF9007 /* SceneDelegate.swift */; };
 		0E9536A12503378700FF9007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9536A02503378700FF9007 /* ViewController.swift */; };
 		0E9536A42503378700FF9007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9536A22503378700FF9007 /* Main.storyboard */; };
 		0E9536A62503378E00FF9007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9536A52503378E00FF9007 /* Assets.xcassets */; };
 		0E9536A92503378E00FF9007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9536A72503378E00FF9007 /* LaunchScreen.storyboard */; };
+		0E9536B2250405DE00FF9007 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9536B0250405DE00FF9007 /* LetterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0788D02506E9EF00F6C23A /* gameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameBrain.swift; sourceTree = "<group>"; };
+		0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		0E9536992503378700FF9007 /* WordSearchiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSearchiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E95369C2503378700FF9007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E95369E2503378700FF9007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		0E9536A52503378E00FF9007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E9536A82503378E00FF9007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E9536AA2503378E00FF9007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E9536B0250405DE00FF9007 /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				0E95369C2503378700FF9007 /* AppDelegate.swift */,
 				0E95369E2503378700FF9007 /* SceneDelegate.swift */,
 				0E9536A02503378700FF9007 /* ViewController.swift */,
+				0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */,
+				0E0788D02506E9EF00F6C23A /* gameBrain.swift */,
+				0E9536B0250405DE00FF9007 /* LetterCell.swift */,
 				0E9536A22503378700FF9007 /* Main.storyboard */,
 				0E9536A52503378E00FF9007 /* Assets.xcassets */,
 				0E9536A72503378E00FF9007 /* LaunchScreen.storyboard */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0788D12506E9EF00F6C23A /* gameBrain.swift in Sources */,
 				0E9536A12503378700FF9007 /* ViewController.swift in Sources */,
 				0E95369D2503378700FF9007 /* AppDelegate.swift in Sources */,
 				0E95369F2503378700FF9007 /* SceneDelegate.swift in Sources */,
+				0E9536B2250405DE00FF9007 /* LetterCell.swift in Sources */,
+				0E8FF7B3250B3B10007489F9 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FN76GJ28Y5;
 				INFOPLIST_FILE = WordSearchiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FN76GJ28Y5;
 				INFOPLIST_FILE = WordSearchiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

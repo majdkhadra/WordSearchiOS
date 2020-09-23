@@ -9,14 +9,21 @@
 import UIKit
 
 class TitleViewController: UIViewController {
-
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startButton.layer.cornerRadius = 20
+        startButton.clipsToBounds = true
+        startButton.layer.borderColor = UIColor.black.cgColor
+        startButton.layer.borderWidth = 2
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func startPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
