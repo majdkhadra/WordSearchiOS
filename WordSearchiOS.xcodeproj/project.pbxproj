@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E0788D12506E9EF00F6C23A /* gameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0788D02506E9EF00F6C23A /* gameBrain.swift */; };
+		0E0788D12506E9EF00F6C23A /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0788D02506E9EF00F6C23A /* GameBrain.swift */; };
+		0E07FC35252AD06300665E20 /* WordSearchiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E07FC34252AD06300665E20 /* WordSearchiOSTests.swift */; };
 		0E8FF7B3250B3B10007489F9 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */; };
 		0E95369D2503378700FF9007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95369C2503378700FF9007 /* AppDelegate.swift */; };
 		0E95369F2503378700FF9007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95369E2503378700FF9007 /* SceneDelegate.swift */; };
@@ -16,10 +17,24 @@
 		0E9536A62503378E00FF9007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9536A52503378E00FF9007 /* Assets.xcassets */; };
 		0E9536A92503378E00FF9007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9536A72503378E00FF9007 /* LaunchScreen.storyboard */; };
 		0E9536B2250405DE00FF9007 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9536B0250405DE00FF9007 /* LetterCell.swift */; };
+		0EA2028E2526C62000503531 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2028D2526C62000503531 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E07FC37252AD06300665E20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E9536912503378700FF9007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9536982503378700FF9007;
+			remoteInfo = WordSearchiOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0E0788D02506E9EF00F6C23A /* gameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameBrain.swift; sourceTree = "<group>"; };
+		0E0788D02506E9EF00F6C23A /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
+		0E07FC32252AD06200665E20 /* WordSearchiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSearchiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E07FC34252AD06300665E20 /* WordSearchiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSearchiOSTests.swift; sourceTree = "<group>"; };
+		0E07FC36252AD06300665E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		0E9536992503378700FF9007 /* WordSearchiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSearchiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E95369C2503378700FF9007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,9 +45,17 @@
 		0E9536A82503378E00FF9007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E9536AA2503378E00FF9007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E9536B0250405DE00FF9007 /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
+		0EA2028D2526C62000503531 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E07FC2F252AD06200665E20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E9536962503378700FF9007 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +66,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E07FC33252AD06300665E20 /* WordSearchiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E07FC34252AD06300665E20 /* WordSearchiOSTests.swift */,
+				0E07FC36252AD06300665E20 /* Info.plist */,
+			);
+			path = WordSearchiOSTests;
+			sourceTree = "<group>";
+		};
+		0E07FC3E252B92D900665E20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E9536A02503378700FF9007 /* ViewController.swift */,
+				0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E07FC41252B92E700665E20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EA2028D2526C62000503531 /* Constants.swift */,
+				0E0788D02506E9EF00F6C23A /* GameBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E07FC44252B930200665E20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E9536A22503378700FF9007 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0E9536902503378700FF9007 = {
 			isa = PBXGroup;
 			children = (
 				0E95369B2503378700FF9007 /* WordSearchiOS */,
+				0E07FC33252AD06300665E20 /* WordSearchiOSTests */,
 				0E95369A2503378700FF9007 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0E9536992503378700FF9007 /* WordSearchiOS.app */,
+				0E07FC32252AD06200665E20 /* WordSearchiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,11 +124,10 @@
 			children = (
 				0E95369C2503378700FF9007 /* AppDelegate.swift */,
 				0E95369E2503378700FF9007 /* SceneDelegate.swift */,
-				0E9536A02503378700FF9007 /* ViewController.swift */,
-				0E8FF7B2250B3B10007489F9 /* TitleViewController.swift */,
-				0E0788D02506E9EF00F6C23A /* gameBrain.swift */,
+				0E07FC41252B92E700665E20 /* Model */,
+				0E07FC44252B930200665E20 /* View */,
+				0E07FC3E252B92D900665E20 /* Controller */,
 				0E9536B0250405DE00FF9007 /* LetterCell.swift */,
-				0E9536A22503378700FF9007 /* Main.storyboard */,
 				0E9536A52503378E00FF9007 /* Assets.xcassets */,
 				0E9536A72503378E00FF9007 /* LaunchScreen.storyboard */,
 				0E9536AA2503378E00FF9007 /* Info.plist */,
@@ -79,6 +138,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E07FC31252AD06200665E20 /* WordSearchiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E07FC3B252AD06300665E20 /* Build configuration list for PBXNativeTarget "WordSearchiOSTests" */;
+			buildPhases = (
+				0E07FC2E252AD06200665E20 /* Sources */,
+				0E07FC2F252AD06200665E20 /* Frameworks */,
+				0E07FC30252AD06200665E20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E07FC38252AD06300665E20 /* PBXTargetDependency */,
+			);
+			name = WordSearchiOSTests;
+			productName = WordSearchiOSTests;
+			productReference = 0E07FC32252AD06200665E20 /* WordSearchiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0E9536982503378700FF9007 /* WordSearchiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E9536AD2503378E00FF9007 /* Build configuration list for PBXNativeTarget "WordSearchiOS" */;
@@ -102,10 +179,14 @@
 		0E9536912503378700FF9007 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "majd khadra";
 				TargetAttributes = {
+					0E07FC31252AD06200665E20 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 0E9536982503378700FF9007;
+					};
 					0E9536982503378700FF9007 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -125,11 +206,19 @@
 			projectRoot = "";
 			targets = (
 				0E9536982503378700FF9007 /* WordSearchiOS */,
+				0E07FC31252AD06200665E20 /* WordSearchiOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E07FC30252AD06200665E20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E9536972503378700FF9007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,20 +232,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E07FC2E252AD06200665E20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E07FC35252AD06300665E20 /* WordSearchiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E9536952503378700FF9007 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0788D12506E9EF00F6C23A /* gameBrain.swift in Sources */,
+				0E0788D12506E9EF00F6C23A /* GameBrain.swift in Sources */,
 				0E9536A12503378700FF9007 /* ViewController.swift in Sources */,
 				0E95369D2503378700FF9007 /* AppDelegate.swift in Sources */,
 				0E95369F2503378700FF9007 /* SceneDelegate.swift in Sources */,
+				0EA2028E2526C62000503531 /* Constants.swift in Sources */,
 				0E9536B2250405DE00FF9007 /* LetterCell.swift in Sources */,
 				0E8FF7B3250B3B10007489F9 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E07FC38252AD06300665E20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E9536982503378700FF9007 /* WordSearchiOS */;
+			targetProxy = 0E07FC37252AD06300665E20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0E9536A22503378700FF9007 /* Main.storyboard */ = {
@@ -178,6 +284,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E07FC39252AD06300665E20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FN76GJ28Y5;
+				INFOPLIST_FILE = WordSearchiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majdkhadra.WordSearchiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordSearchiOS.app/WordSearchiOS";
+			};
+			name = Debug;
+		};
+		0E07FC3A252AD06300665E20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FN76GJ28Y5;
+				INFOPLIST_FILE = WordSearchiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majdkhadra.WordSearchiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordSearchiOS.app/WordSearchiOS";
+			};
+			name = Release;
+		};
 		0E9536AB2503378E00FF9007 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -333,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E07FC3B252AD06300665E20 /* Build configuration list for PBXNativeTarget "WordSearchiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E07FC39252AD06300665E20 /* Debug */,
+				0E07FC3A252AD06300665E20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0E9536942503378700FF9007 /* Build configuration list for PBXProject "WordSearchiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -20,7 +20,10 @@ let reuseIdentifier = "Letter Cell"
 
 let spaceBetweenCellsInARow: CGFloat = 9
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+class ViewController: UIViewController {
+    
+    let gameBrain = GameBrain()
     
     @IBOutlet weak var checkWordButton: UIButton!
     @IBOutlet var collectionView: UICollectionView!
@@ -34,55 +37,63 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var kotlinLabel: UILabel!
     
     @IBAction func checkWordButton(_ sender: UIButton) {
-        if wordsToFindArray.contains(word) {
+        
+        let userFoundWord = gameBrain.checkAnswer(word)
+        
+        if userFoundWord {
             wordCount.text = String(Int(wordCount.text!)! + 1)
-            for element in selectedCells {
-                collectionView.cellForItem(at: element)!.backgroundColor = .green
-                javaLabel.textColor = .green
-            }
+            
+            gameBrain.cellsToGreen(collectionView)
+            
             switch word {
             case "JAVA":
-                javaLabel.textColor = .green
+                gameBrain.labelToGreen(javaLabel)
             case "SWIFT":
-                swiftLabel.textColor = .green
+                gameBrain.labelToGreen(swiftLabel)
             case "MOBILE":
-                mobileLabel.textColor = .green
+                gameBrain.labelToGreen(mobileLabel)
             case "OBJECTIVEC":
-                objLabel.textColor = .green
+                gameBrain.labelToGreen(objLabel)
             case "KOTLIN":
-                kotlinLabel.textColor = .green
+                gameBrain.labelToGreen(kotlinLabel)
             case "VARIABLE":
-                variableLabel.textColor = .green
+                gameBrain.labelToGreen(variableLabel)
             default:
                 return
             }
         }
+        
         else {
-            for element in selectedCells {
-                collectionView.cellForItem(at: element)!.backgroundColor = .white
-
-            }
+            gameBrain.cellsToWhite(collectionView)
             
             
         }
-        if wordCount.text == "6" {
-            let restartGameAction = UIAlertAction(title: "Play Again", style: .default) { (action) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            let alertController = UIAlertController(title: "You Win!", message:
-                "You found all the words!", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Great!", style: .default))
-            alertController.addAction(restartGameAction)
-            
-
-            self.present(alertController, animated: true, completion: nil)
+        if gameBrain.score == 6 {
+            gameBrain.endGameAlert(self)
         }
+        
         selectedCells = []
         word = ""
         currentSelection = nil
+        
     }
     
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        gameBrain.collectionViewDimensions(collectionView, self)
+        gameBrain.buttonCustomized(checkWordButton)
+        
+    }
+}
+
+
+
+// MARK: - CollectionView Initializer Code
+
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // Number of Cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -96,7 +107,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Puts wordsToFind in their Cells
         if wordNums.contains(indexPath.row) {
-            let index: Int = wordNums.firstIndex(of: indexPath.row)! //
+            let index: Int = wordNums.firstIndex(of: indexPath.row)!
             cell.letterLabel.text = String(wordsAsCharacters[index])
         }
             // Fills other cells with random letters
@@ -126,6 +137,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return false
         }
     }
+    
     // Cell selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! LetterCell
@@ -141,17 +153,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let width = (view.frame.size.width - spaceBetweenCellsInARow) / 10
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
-        checkWordButton.layer.cornerRadius = 15
-        checkWordButton.layer.borderWidth = 1
-        checkWordButton.layer.borderColor = UIColor.black.cgColor
-        checkWordButton.clipsToBounds = true
-        
-    }
+    
 }
+
+
 
